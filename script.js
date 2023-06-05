@@ -9,19 +9,20 @@ const time_prayer = document.querySelector(".time-prayer");
 
 const counter = setInterval(() => {
   const now = new Date();
-  
+
   // console.log(date)
   hours.innerHTML = now.getHours();
   minuts.innerHTML = String(now.getMinutes()).padStart(2, "0");
   seconds.innerHTML = String(now.getSeconds()).padStart(2, "0");
 }, 1000);
 
-
 async function logJSONData() {
   const response = await fetch(url);
   const jsonDate = await response.json();
 
-  console.log(jsonDate.data)
+  console.log(jsonDate.data);
 }
 
 logJSONData();
+
+console.log("test");
